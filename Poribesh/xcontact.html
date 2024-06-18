@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+  /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+     /* background-color: #007bff; */
+     color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+}
+
+header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+header nav a.current {
+    font-weight: bold;
+}
+
+.hero {
+    height: 80vh;
+    background-image: url('river-1851031_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-form {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+
+.ceo-info {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.ceo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ceo-photo {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 50px;
+}
+
+.ceo-photo img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ceo-details {
+    flex: 2;
+    text-align: left;
+}
+
+.ceo-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.ceo-details h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.ceo-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.contact-info {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info div {
+    text-align: center;
+    flex: 1; /* Added to make each div take equal space */
+    padding: 10px; /* Reduced padding */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 5px; /* Adjusted margin */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 5px; /* Adjusted margin */
+}
+        
+
+.social-icons {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 15px;
+}
+
+.social-icons img {
+    width: 40px;
+}
+
+footer {
+    background-color: #0056b3;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #00ffcc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+</style>
+
+<header>
+    <h1>Poribesh</h1>
+    <nav>
+        <!-- <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html" class="current">Contact</a> -->
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us to learn more about environmental sustainability.</p>
+    </div>
+</section>
+
+<section class="contact-form">
+    <div class="form-container">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<section class="ceo-info">
+    <div class="ceo-container">
+        <div class="ceo-photo">
+            <img src="ceo.jpg" alt="CEO Photo">
+        </div>
+        <div class="ceo-details">
+            <h2>Meet Our CEO</h2>
+            <h3>Sankur Kundu</h3>
+            <p>Welcome to Poribesh, where our mission is to foster a sustainable future through education, community engagement, and actionable initiatives. At Poribesh, 
+              we are committed to empowering individuals and organizations to make environmentally conscious decisions that positively impact our planet.
+              Feel free to reach out to us with your ideas, feedback, or questions. Together, we can create a greener, more sustainable world for generations to come.
+
+Thank you for being part of the Poribesh community.
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-info">
+      <div>
+          <h3>Email Id</h3>
+          <p>heyobsidian93@gmail.com</p>
+      </div>
+      <div>
+        <h3>Office Address</h3>
+        <p>Burdwan road, Kolkata, 700027, West Bengal, India</p>
+      </div>
+      <div>
+          <h3>Phone Number</h3>
+          <p>+91 9776194201</p>
+      </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+  </div>
+  <nav>
+      <a href="xprivacypolicy.html">Privacy Policy</a>
+      <a href="xtermsofservice.html">Terms of Service</a>
+      <!-- <a href="xcontact.html">Contact Us</a> -->
+  </nav>
+</footer>
+
+<script>
+  window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+</body>
+</html>

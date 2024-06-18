@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add any specific styles for the Education page here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('book-1835799_1920.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .feature {
+            background-color: lightblue;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin-top: 90px;
+            margin-bottom: 44px;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #007bff; /* Adjust color as needed */
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+
+
+   .content {
+         max-width: 800px;
+         margin: 0 auto;
+         background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       }
+       footer {
+            background-color: #0056b3;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: -250px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+
+      
+    </style>
+<header>
+  <h1>Poribesh</h1>
+  <!-- <p>Explore Sustainable Solutions</p> -->
+  <nav>
+  
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+      <h1>Education</h1>
+      <p></p>
+  </div>
+</section>
+
+<div class="content">
+    <h2>Environmental Education</h2>
+    <p>
+      In the dynamic landscape of today's world, sustainability stands as a beacon of hope and responsibility towards our planet's future. At Poribesh, we are committed to fostering a community-driven approach towards environmental consciousness and action.
+
+Our platform serves as a comprehensive resource hub where individuals, businesses, and communities can converge to explore, learn, and engage in sustainable practices. Through insightful articles, practical guides, and innovative solutions, Poribesh aims to educate and empower everyone to make informed decisions that benefit our environment.
+
+From understanding the impact of everyday choices to discovering eco-friendly products and initiatives, Poribesh encourages proactive steps towards reducing our carbon footprint and preserving natural resources. We believe that small changes can lead to significant outcomes, and together, we can create a sustainable future for generations to come.
+
+Join us in this journey of discovery, education, and action. Together, let's build a world where sustainability is not just a choice but a way of life.
+
+
+   </p>
+    <div class="back-link">
+    
+    </div>
+</div>
+
+<footer>
+  <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+  </div>
+  <nav>
+      <a href="xprivacypolicy.html">Privacy Policy</a>
+      <a href="xtermsofservice.html">Terms of Service</a>
+      <a href="xcontact.html">Contact Us</a>
+  </nav>
+</footer>
+
+
+<script>
+  // Scroll to features section
+  window.onload = function() {
+      setTimeout(function() {
+          window.scrollTo(0, 0);
+      }, 0);
+  };
+
+  window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      // Calculate scroll percentage
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.body.clientHeight;
+      const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+      // Fade out the header gradually
+      header.style.opacity = 1 - (scrollPosition / 70);
+  });
+
+  // JavaScript for animations
+  document.addEventListener('DOMContentLoaded', function() {
+      // Hero section animation
+      const heroContent = document.querySelector('.hero-content');
+      heroContent.classList.add('show');
+  });
+</script>
+
+</body>
+</html>

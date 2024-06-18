@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s, opacity 0.3s;
+            /* background-color: rgba(255, 255, 255, 0.9); */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('leaf-5592392_1920.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .innovations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .innovation {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .innovation:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .innovation h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .innovation p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #0056b3;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Poribesh</h1>
+        <!-- <p>Innovation for Sustainability</p> -->
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Innovation</h1>
+            <p>Explore Cutting-Edge Technologies and Ideas Driving Sustainability.</p>
+        </div>
+    </section>
+
+    <section class="innovations">
+        <div class="innovation">
+            <h2>Eco-friendly Urban Garden Initiative</h2>
+            <p>Our Eco-friendly Urban Garden Initiative aims to transform urban spaces into thriving hubs of biodiversity and sustainability. By repurposing vacant lots and rooftops, we create vibrant gardens that promote local food production, reduce carbon footprint, and enhance community engagement. Partnering with local businesses and volunteers,
+               we integrate sustainable practices like rainwater harvesting and organic farming techniques to ensure minimal environmental impact and maximum community benefit..</p>
+            
+        </div>
+
+        <div class="innovation">
+            <h2>Renewable Energy for Rural Schools</h2>
+            <p>The Renewable Energy for Rural Schools project installs solar energy systems in remote schools to provide reliable electricity and foster sustainable development. 
+              By harnessing solar power, we reduce dependency on fossil fuels, mitigate energy costs, and empower students with access to modern educational resources. Collaborating with local governments and renewable energy providers, 
+              we prioritize environmental stewardship and equitable access to education, promoting a greener future for underserved communities.</p>
+            
+        </div>
+        
+        <!-- Add more innovations as needed -->
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+        </div>
+        <nav>
+            <a href="xprivacypolicy.html">Privacy Policy</a>
+            <a href="xtermsofservice.html">Terms of Service</a>
+            <a href="xcontact.html">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script>
+        // JavaScript for scroll and header opacity
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.clientHeight;
+            const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+            header.style.opacity = 1 - (scrollPosition / 70);
+        });
+    </script>
+</body>
+</html>

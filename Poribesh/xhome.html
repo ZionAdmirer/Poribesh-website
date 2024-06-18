@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poribesh</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        header {
+            /* background-color: #007bff; */
+            color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        
+        header.scrolled {
+            background-color: rgba(0, 123, 255, 0.8);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-image: url('black-naped-oriole-7580879_1920.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: slideInDown 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: slideInUp 1s ease-out;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        
+        .feature {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            display: inline-block;
+            width: calc(33.33% - 40px);
+            margin: 20px;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        
+        .feature p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .parallax {
+            background-image: url('mountain-2114335_1920.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .parallax h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideInUp 1s ease-out;
+        }
+        
+        .parallax p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: slideInUp 1s ease-out;
+        }
+        
+        .cta {
+            margin-top: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+        
+        .cta a {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta a:hover {
+            background-color: #0056b3;
+        }
+        
+        footer {
+            background-color: #0056b3;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: -250px;
+        }
+        footer .social-icons {
+            margin: 20px 0;
+        }
+        footer .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        footer nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .feature {
+                width: calc(50% - 40px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Poribesh</h1>
+    <p>Your Environmental Sustainability Hub</p>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Empowering Tomorrow</h1>
+        <p>Discover Your Path to Sustainable Living with Poribesh</p>
+        <div class="scroll-down" onclick="scrollToFeatures()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 20L4 12M4 12L12 4M4 12L21 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <h2>Education</h2>
+        <p>Learn about environmental issues and sustainable practices.</p>
+    </div>
+    <div class="feature">
+        <h2>Community</h2>
+        <p>Join our community efforts to protect and preserve our environment.</p>
+    </div>
+    <div class="feature">
+        <h2>Actions</h2>
+        <p>Take action through initiatives and projects for a greener planet.</p>
+    </div>
+</section>
+
+<section class="parallax">
+    <h2>Join Us in Making a Difference</h2>
+    <p>Together, we can create a sustainable future for generations to come.</p>
+    <div class="cta">
+        <a href="xfeatures.html">Get Involved</a>
+    </div>
+</section>
+<footer>
+  <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+  </div>
+  <nav>
+      <a href="xprivacypolicy.html">Privacy Policy</a>
+      <a href="xtermsofservice.html">Terms of Service</a>
+      <a href="xcontact.html">Contact Us</a>
+  </nav>
+</footer>
+
+<script>
+    // Scroll to features section
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+    window.onload = function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 0);
+    };
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        // Calculate scroll percentage
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.body.clientHeight;
+        const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+        // Fade out the header gradually
+        header.style.opacity = 1 - (scrollPosition / 70);
+    });
+
+    // JavaScript for animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Hero section animation
+        const heroContent = document.querySelector('.hero-content');
+        heroContent.classList.add('show');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            color: #007bff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('windmill-4550711_1920.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .terms-content {
+            padding: 50px;
+            background-color: #fff;
+            margin-top: 100px; /* Adjust as needed */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .terms-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .terms-content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #0056b3;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 50px;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00ffcc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Additional styling specific to this page can be added here */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Poribesh</h1>
+        <!-- <p>Terms of Service</p> -->
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Terms of Service</h1>
+            <p>Read our terms to understand the rules and guidelines for using our services.</p>
+        </div>
+    </section>
+
+    <div class="terms-content">
+        <h2>Introduction</h2>
+        <p>Welcome to Poribesh's Terms of Service. These terms outline the rules and regulations for the use of our website and services.</p>
+
+        <h2>Acceptance of Terms</h2>
+        <p>By accessing or using our website, you agree to abide by these Terms of Service and all applicable laws and regulations.</p>
+
+        <h2>Use License</h2>
+        <p>Permission is granted to temporarily download one copy of the materials (information or software) on Poribesh's website for personal, non-commercial transitory viewing only.</p>
+
+        <h2>Disclaimer</h2>
+        <p>The materials on Poribesh's website are provided on an 'as is' basis. Poribesh makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+
+        <h2>Limitations</h2>
+        <p>In no event shall Poribesh or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Poribesh's website, even if Poribesh or a Poribesh authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+
+        <h2>Modifications</h2>
+        <p>Poribesh may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
+
+        <h2>Governing Law</h2>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of [Your Country] and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+        </div>
+        <nav>
+            <a href="xprivacypolicy.html">Privacy Policy</a>
+            <!-- <a href="terms-of-service.html">Terms of Service</a> -->
+            <a href="xcontact.html">Contact Us</a>
+        </nav>
+    </footer>
+
+    <script>
+        // JavaScript for scroll and header opacity
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.clientHeight;
+            const scrolled = (scrollPosition / (documentHeight - windowHeight)) * 100;
+
+            header.style.opacity = 1 - (scrollPosition / 70);
+        });
+    </script>
+</body>
+</html>
